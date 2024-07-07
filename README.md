@@ -24,13 +24,13 @@ This project uses the datasets from [dataset](https://www.kaggle.com/datasets/ah
 2. Missing Values:
   The next step involved searching the rows to locate and determine if there were any null values. The search results yielded that there were no missing null values in any rows. However, the unnamed column was entirely empty and as such it was better to drop  that column in the analysis. The search results for this entire search can be seen below.
   <br>
-      <img src="Images/2.png" width="500">
+      <img src="Images/2.png" width="220">
   <br>
   
 3. Handling Categorical Data:
   The Age_Profile column had a range of ages divided into 0-16, 16-64, and 65+. This reflects the US methodology of categorizing people into working and non-working age populations. To make the analysis of the categorical data easier the decision was made to convert it to a dummy variable. Time_Bands was another variable which had a range of months for the wait time, so it was converted into numerical data. And finally, we dropped the Adult_Child column during implementation of the machine learning model because the Age_Profile is sufficient enough to tell if the person is an adult or child. The final code for our changes is shown below.
   <br>
-      <img src="Images/3.png" width="500">
+      <img src="Images/3.png" width="600">
   <br>
 
 # 👣 Model Selection and Training  
@@ -42,7 +42,7 @@ Naive Bayes, Logistic Regression, and Decision Tree are all three machine learni
 1. Naive Bayes:
   It is a simple, effective model and easy to implement. It also works well with large and categorical datasets. This perfectly suited our needs as most of the healthcare data was categorical. Below we have pasted the code we used as well as its associated confusion matrix.
   <br>
-      <img src="Images/5.png" width="500">
+      <img src="Images/5.png" width="600">
   <br>
   <br>
       <img src="Images/6.png" width="500">
@@ -51,13 +51,13 @@ Naive Bayes, Logistic Regression, and Decision Tree are all three machine learni
 2. Logistic Regression:
   Logistic regression can scale effectively to large datasets and is less prone to overfitting. It tends to work better with smaller training sets too, which is beneficial considering the size of this dataset was not too large. As a result the test set itself would not be large either. Below is the code we used for the logistic regression model.
   <br>
-      <img src="Images/7.png" width="500">
+      <img src="Images/7.png" width="600">
   <br>
   
 3. Decision Tree:
   Decision trees are a versatile and generally a powerful machine learning algorithm. It works well with large datasets and can be combined into ensemble methods and  provide a measure of feature importance, indicating which features are more influential in making predictions. Below is our code & confusion matrix for the model.
   <br>
-      <img src="Images/8.png" width="500">
+      <img src="Images/8.png" width="600">
   <br>
   <br>
       <img src="Images/9.png" width="500">
@@ -79,17 +79,17 @@ The final results for each machine learning model can be seen in the chart above
 1. Yearly Total Number of Inpatients vs. Outpatients:
    Between 2018 and 2020, the distribution of total inpatients and outpatients was even according to the charts. Notably, throughout this period, the number of inpatients consistently surpassed that of outpatients. The year 2020 witnessed peak figures for both inpatients and outpatients, potentially influenced by the COVID-19 outbreak.
    <br>
-      <img src="Images/11.png" width="500">
+      <img src="Images/11.png" width="320">
    <br>
    <br>
-      <img src="Images/12.png" width="500">
+      <img src="Images/12.png" width="320">
    <br>
    
 2. Age Group of Inpatients vs. Outpatients:
    The age dependency ratio defines the connection among three population segments: ages 0-15, 16-64, and 65+. It delineates the "dependent population" (ages 0-15 and 65+) from the "working age population" (ages 16-64), aligning with the U.S. Bureau of Labor Statistics' definition. As per the data it appears that those in the working age population wait the longest, followed by those who are expected to be retired.
 Number of inpatients and outpatients by age group: 16-64 > 65+ > 0-15.
    <br>
-      <img src="Images/13.png" width="500">
+      <img src="Images/13.png" width="900">
    <br>
 
 3. Percentage of Inpatients vs. Outpatients by Time Band for Cardiology:
@@ -106,26 +106,26 @@ This small variance implies an almost uniform distribution, indicating treatment
 Conversely, it can be seen that December tends to have the lowest wait time period throughout the year.
 Regardless of the month, inpatients typically await treatment for a span of 0 to 3 months. However, it does need to be stated that a similar percentage of patients must also wait 3 to 6 months which most would find unacceptable.
    <br>
-      <img src="Images/15.png" width="500">
+      <img src="Images/15.png" width="800">
    <br>
 
    The heat map below indicates that March has the longest wait time period for outpatients considering the data range of 2018 to 2021. Whereas, April trends to the lowest wait time period throughout the year.
 Regardless of the month, outpatients typically await treatment for a span of 0 to 3 months. However, the first 3 months of the year, the time bands of 3 to 6 months is almost equal to 0 to 3 months.
    <br>
-      <img src="Images/16.png" width="500">
+      <img src="Images/16.png" width="800">
    <br>
 
 5. Wait Time by Specialty:
    The below charts indicate that the people waiting in the time band 0-3 months lead the dataset and account for about 35% of the total data procured. This is followed by those who wait 3-6 & 6-9 which account for over 36%. More patients are waiting longer than 3 months than those who are not.
    <br>
-      <img src="Images/17.png" width="500">
+      <img src="Images/17.png" width="800">
    <br>
    <br>
       <img src="Images/18.png" width="500">
    <br>
    Out of many different specialties, General Surgery ranks the top among the most awaited specialty over others followed by Orthopaedics and Gynaecology by time band. It should be noted that this occurs because General Surgery likely has the highest raw number of patients to be expected, but even then the percentage of outpatient Time_Bands breakdown shows that the vast majority of patients are all waiting longer than 3 months.
    <br>
-      <img src="Images/19.png" width="500">
+      <img src="Images/19.png" width="800">
    <br>
    <br>
       <img src="Images/20.png" width="500">
