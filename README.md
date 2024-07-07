@@ -9,25 +9,25 @@ Our project questions include:
 - What type of staff do the hospital need?
 - What days of the year are the busiest?
 - How can we fix it?
-- 
+
 This project uses the datasets from [dataset](https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset/data).
 
 <i>In collaboration with Fazil Ahmed, Richa Kapuskari, Shri Hari Sekar, Ziyue Zhang.</i>  
 
 # 📊 Data Pre-Processing  
-- Merging all dataset files:
+1. Merging all dataset files:
   Combining all the four inpatient data files into one and outpatient data files into the other to make the analysis easier when running the machine learning algorithms. Below the code for combining the dataset files can be seen.
   <br>
       <img src="Images/1.png" width="500">
   <br>
    
-- Missing Values:
+2. Missing Values:
   The next step involved searching the rows to locate and determine if there were any null values. The search results yielded that there were no missing null values in any rows. However, the unnamed column was entirely empty and as such it was better to drop  that column in the analysis. The search results for this entire search can be seen below.
   <br>
       <img src="Images/2.png" width="500">
   <br>
   
-- Handling Categorical Data:
+3. Handling Categorical Data:
   The Age_Profile column had a range of ages divided into 0-16, 16-64, and 65+. This reflects the US methodology of categorizing people into working and non-working age populations. To make the analysis of the categorical data easier the decision was made to convert it to a dummy variable. Time_Bands was another variable which had a range of months for the wait time, so it was converted into numerical data. And finally, we dropped the Adult_Child column during implementation of the machine learning model because the Age_Profile is sufficient enough to tell if the person is an adult or child. The final code for our changes is shown below.
   <br>
       <img src="Images/3.png" width="500">
@@ -39,7 +39,7 @@ Naive Bayes, Logistic Regression, and Decision Tree are all three machine learni
       <img src="Images/4.png" width="500">
   <br>
   
-- Naive Bayes:
+1. Naive Bayes:
   It is a simple, effective model and easy to implement. It also works well with large and categorical datasets. This perfectly suited our needs as most of the healthcare data was categorical. Below we have pasted the code we used as well as its associated confusion matrix.
   <br>
       <img src="Images/5.png" width="500">
@@ -48,13 +48,13 @@ Naive Bayes, Logistic Regression, and Decision Tree are all three machine learni
       <img src="Images/6.png" width="500">
   <br>
   
-- Logistic Regression:
+2. Logistic Regression:
   Logistic regression can scale effectively to large datasets and is less prone to overfitting. It tends to work better with smaller training sets too, which is beneficial considering the size of this dataset was not too large. As a result the test set itself would not be large either. Below is the code we used for the logistic regression model.
   <br>
       <img src="Images/7.png" width="500">
   <br>
   
-- Decision Tree:
+3. Decision Tree:
   Decision trees are a versatile and generally a powerful machine learning algorithm. It works well with large datasets and can be combined into ensemble methods and  provide a measure of feature importance, indicating which features are more influential in making predictions. Below is our code & confusion matrix for the model.
   <br>
       <img src="Images/8.png" width="500">
